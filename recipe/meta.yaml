@@ -14,14 +14,15 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install  --no-deps --no-build-isolation . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
+    - wheel
   run:
-    - python >=3.7
+    - python >=3.8
     - txaio >=21.2.1
     - cryptography >=3.4.6
     - hyperlink >=21.0.0
@@ -33,6 +34,8 @@ test:
     - autobahn.wamp
     - autobahn.websocket
     - autobahn.util
+  commands:
+    - pip check
 
 about:
   home: https://github.com/crossbario/autobahn-python
@@ -46,4 +49,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - synapticarbors
+    - ianaobi
