@@ -36,6 +36,8 @@ test:
     - autobahn.util
   commands:
     - pip check
+  requires:
+    - pip
   
 about:
   home: https://github.com/crossbario/autobahn-python
