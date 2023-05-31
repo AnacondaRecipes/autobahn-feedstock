@@ -36,7 +36,7 @@ test:
     - autobahn.util
   commands:
     - pip check
-
+  
 about:
   home: https://github.com/crossbario/autobahn-python
   license: MIT
@@ -50,3 +50,4 @@ about:
 extra:
   recipe-maintainers:
     - ianaobi
+    - bradley
